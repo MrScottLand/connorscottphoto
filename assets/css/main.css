@@ -4180,3 +4180,12 @@ input, select, textarea {
   opacity: 1 !important;
   transform: translateX(0) !important;
 }
+
+.no-slant:after {
+    display: none;
+}
+
+#footer {
+    margin-top: 0;
+    padding-top: 0;
+}
