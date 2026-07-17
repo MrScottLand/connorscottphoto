@@ -3381,8 +3381,8 @@ input, select, textarea {
 		
 		#banner .inner {
 		    width: min(55em, 100%);
-		    margin: 0 auto;
-		    padding: 0 4em;            /* 4em instead of 6em */
+		    margin: 0 auto 0 8%;
+		    padding: 0 4em;
 		    box-sizing: border-box;
 		}
 
