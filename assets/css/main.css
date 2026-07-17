@@ -3620,7 +3620,7 @@ input, select, textarea {
 
 	.wrapper {
 		background-color: #2e3141;
-		margin: 6.5em 0;
+		margin: 3em 0;
 		position: relative;
 	}
 
@@ -3798,6 +3798,8 @@ input, select, textarea {
 			    border-radius: 50%;
 			    overflow: hidden;
 			    flex-shrink: 0;
+				transform: translateX(-3em);
+
 			}
 			
 			.wrapper.spotlight .image img {
