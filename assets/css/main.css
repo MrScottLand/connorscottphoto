@@ -4225,3 +4225,26 @@ input, select, textarea {
     border-radius: 50%;
     overflow: hidden;
 }
+
+/* Default (leave bottom alone) */
+.portrait img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Top image */
+#portrait1 img {
+    object-position: center 25%;
+}
+
+/* Middle image */
+#portrait2 img {
+    object-position: center 20%;
+}
+
+/* Bottom image */
+#portrait3 img {
+    object-position: center center;
+}
