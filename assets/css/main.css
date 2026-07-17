@@ -4180,3 +4180,269 @@ input, select, textarea {
   opacity: 1 !important;
   transform: translateX(0) !important;
 }
+
+/* ============================================
+   OCEAN COLOR PALETTE - SOLID STATE
+   (With Beige e2dbd3 Accents)
+   ============================================ */
+
+/* Dark Blue Background */
+#header,
+#banner,
+#footer,
+#menu,
+.wrapper,
+.spotlight,
+section {
+    background-color: #1a3a5c !important;
+}
+
+/* Banner Text */
+#banner .inner h2,
+#banner .inner p,
+#banner .inner .button {
+    color: #faf6f0 !important;
+}
+
+#banner .inner .button {
+    border-color: #faf6f0 !important;
+}
+
+#banner .inner .button:hover {
+    background: #faf6f0 !important;
+    color: #1a3a5c !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #faf6f0 !important;
+}
+
+/* Body Text */
+body, p, li, .content p {
+    color: #d5e8ea !important;
+}
+
+/* Links */
+a {
+    color: #a8dadc !important;
+}
+
+a:hover {
+    color: #2a9d8f !important;
+}
+
+/* Buttons */
+.button {
+    color: #faf6f0 !important;
+    border-color: #a8dadc !important;
+}
+
+.button:hover {
+    background: #2a9d8f !important;
+    border-color: #2a9d8f !important;
+    color: #faf6f0 !important;
+}
+
+.button.primary {
+    background: #2a9d8f !important;
+    border-color: #2a9d8f !important;
+    color: #faf6f0 !important;
+}
+
+.button.primary:hover {
+    background: #1a7a6e !important;
+    border-color: #1a7a6e !important;
+    color: #faf6f0 !important;
+}
+
+/* ============================================
+   BEIGE e2dbd3 ACCENTS
+   ============================================ */
+
+/* Header "Connor Scott Photography" */
+#header h1 a {
+    color: #e2dbd3 !important;
+}
+
+#header h1 a:hover {
+    color: #faf6f0 !important;
+}
+
+/* "Menu" Text */
+#header .menuToggle {
+    color: #e2dbd3 !important;
+    background: transparent !important;
+}
+
+#header .menuToggle:hover {
+    color: #faf6f0 !important;
+    background: transparent !important;
+}
+
+/* Hamburger Lines */
+#header .menuToggle span,
+#header .menuToggle span::before,
+#header .menuToggle span::after {
+    background-color: #e2dbd3 !important;
+}
+
+#header .menuToggle:hover span,
+#header .menuToggle:hover span::before,
+#header .menuToggle:hover span::after {
+    background-color: #faf6f0 !important;
+}
+
+/* See More Link & Arrow */
+#banner .more {
+    color: #e2dbd3 !important;
+}
+
+#banner .more::after {
+    color: #e2dbd3 !important;
+    border-color: #e2dbd3 !important;
+}
+
+#banner .more:hover {
+    color: #faf6f0 !important;
+}
+
+#banner .more:hover::after {
+    color: #faf6f0 !important;
+    border-color: #faf6f0 !important;
+}
+
+/* PRICES Button (CTA) */
+#cta .button:not(.primary) {
+    color: #e2dbd3 !important;
+    border-color: #e2dbd3 !important;
+}
+
+#cta .button:not(.primary):hover {
+    background: #e2dbd3 !important;
+    color: #1a3a5c !important;
+    border-color: #e2dbd3 !important;
+}
+
+/* ============================================
+   "LEARN MORE" LINKS - BEIGE e2dbd3
+   ============================================ */
+
+/* Learn More Links (Solid State uses .button.small) */
+.button.small,
+.button.small:link,
+.button.small:visited {
+    color: #e2dbd3 !important;
+    border-color: #e2dbd3 !important;
+}
+
+.button.small:hover {
+    background: #e2dbd3 !important;
+    color: #1a3a5c !important;
+    border-color: #e2dbd3 !important;
+}
+
+/* Any other "Learn More" links */
+.features .button,
+.spotlight .button,
+section .button.small {
+    color: #e2dbd3 !important;
+    border-color: #e2dbd3 !important;
+}
+
+.features .button:hover,
+.spotlight .button:hover,
+section .button.small:hover {
+    background: #e2dbd3 !important;
+    color: #1a3a5c !important;
+    border-color: #e2dbd3 !important;
+}
+
+/* Menu Links */
+#menu a {
+    color: #d5e8ea !important;
+}
+
+#menu a:hover {
+    color: #2a9d8f !important;
+}
+
+/* Features / Cards */
+.features article {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.features article h3 {
+    color: #a8dadc !important;
+}
+
+.features article p {
+    color: #d5e8ea !important;
+}
+
+/* Spotlight Sections */
+.spotlight .content {
+    background: transparent !important;
+}
+
+.spotlight .content h2 {
+    color: #faf6f0 !important;
+}
+
+.spotlight .content p {
+    color: #d5e8ea !important;
+}
+
+/* Slide Animation Colors */
+.slide-in-scroll,
+.slide-in-left {
+    color: #faf6f0 !important;
+}
+
+/* Footer */
+#footer .inner {
+    color: #d5e8ea !important;
+}
+
+#footer a {
+    color: #a8dadc !important;
+}
+
+#footer a:hover {
+    color: #2a9d8f !important;
+}
+
+/* CTA Section */
+#cta {
+    background: #2a9d8f !important;
+}
+
+#cta h2 {
+    color: #faf6f0 !important;
+}
+
+#cta p {
+    color: #d5e8ea !important;
+}
+
+#cta .button {
+    border-color: #faf6f0 !important;
+    color: #faf6f0 !important;
+}
+
+#cta .button:hover {
+    background: #faf6f0 !important;
+    color: #1a3a5c !important;
+}
+
+#cta .button.primary {
+    background: #1a3a5c !important;
+    border-color: #1a3a5c !important;
+    color: #faf6f0 !important;
+}
+
+#cta .button.primary:hover {
+    background: #0a1a2c !important;
+    border-color: #0a1a2c !important;
+}
