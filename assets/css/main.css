@@ -4180,14 +4180,3 @@ input, select, textarea {
   opacity: 1 !important;
   transform: translateX(0) !important;
 }
-
-/* Remove gap between Browse All and Get In Touch */
-#four {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-#footer {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
