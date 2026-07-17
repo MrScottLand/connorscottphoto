@@ -3948,16 +3948,16 @@ input, select, textarea {
 			}
 
 				.wrapper:before, .wrapper:after {
-					height: 2.5em;
+					height: 1em;
 				}
 
 				.wrapper:before {
-					top: -2.5em;
+					top: -1em;
 				}
 
 				.wrapper:after {
 					bottom: -2.5em;
-					left: 0;
+					left: -1;
 				}
 
 				.wrapper .inner {
