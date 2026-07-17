@@ -4235,3 +4235,7 @@ input, select, textarea {
 .wrapper.spotlight:nth-of-type(2) .image img {
     object-position: center 25%;
 }
+
+.portrait-middle .image img {
+    object-position: 60% 25%;
+}
