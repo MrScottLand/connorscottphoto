@@ -4248,3 +4248,11 @@ input, select, textarea {
 #portrait3 img {
     object-position: center center;
 }
+
+.top-portrait img {
+    object-position: center 30%;
+}
+
+.middle-portrait img {
+    object-position: center 25%;
+}
