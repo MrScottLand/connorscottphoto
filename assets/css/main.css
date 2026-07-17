@@ -3375,16 +3375,17 @@ input, select, textarea {
 		    min-height: 100vh;
 		    display: flex;
 		    align-items: center;
+		    justify-content: center;   /* Add this */
 		    padding: 0;
 		}
 		
-			}
-		
-				#banner .inner {
+		#banner .inner {
+		    width: min(55em, 100%);
 		    margin: 0 auto;
-		    width: 55em;
-		    width: min(55em, 90%);
+		    padding: 0 4em;            /* 4em instead of 6em */
+		    box-sizing: border-box;
 		}
+
 		#banner .logo {
 			-moz-transition: opacity 2s ease, -moz-transform 1s ease;
 			-webkit-transition: opacity 2s ease, -webkit-transform 1s ease;
