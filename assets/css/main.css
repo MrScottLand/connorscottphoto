@@ -4193,3 +4193,8 @@ input, select, textarea {
 #footer .inner {
     margin-top: -4em;
 }
+
+.browse-up {
+    position: relative;
+    top: -2em;   /* adjust as needed */
+}
