@@ -4275,13 +4275,14 @@ html {
 
 .diagonal-scroll {
     position: absolute;
-    top: -5.2em;
-    right: 3em;
+    top: -3em;
+    right: 6em;
 
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
+	font-size: 1.5em;    /* Bigger text */
     letter-spacing: .12em;
 
     z-index: 100;
@@ -4298,6 +4299,7 @@ body.is-preload .diagonal-scroll {
 }
 
 .diagonal-scroll .icon {
+	font-size: 1.5em;
     margin-left: .5em;
     animation: bounceArrow 2s infinite;
 }
