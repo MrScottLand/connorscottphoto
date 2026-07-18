@@ -3372,7 +3372,7 @@ input, select, textarea {
 /* Banner */
 
 		#banner {
-		    min-height: 100vh;
+		    min-height: 90vh;
 		    display: flex;
 		    align-items: center;
 		    justify-content: center;   /* Add this */
@@ -3469,7 +3469,7 @@ input, select, textarea {
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 				background-size: auto,
  cover;
-				background-position: center,
+				background-position: relative,
  center;
 				margin-bottom: -6.5em;
 			}
@@ -4249,7 +4249,7 @@ input, select, textarea {
 /* Entire blue diagonal is clickable */
 .banner-scroll {
     position: absolute;
-    bottom: 0;
+    bottom: -2.5em;
     right: 0;
     width: 38%;
     height: 9rem;
@@ -4291,4 +4291,8 @@ input, select, textarea {
     50% {
         transform: translateY(6px);
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
