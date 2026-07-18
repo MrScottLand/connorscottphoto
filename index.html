@@ -177,5 +177,18 @@
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
 
+			<script>
+			function smoothScroll(event, targetId) {
+			    event.preventDefault();
+			
+			    const target = document.getElementById(targetId);
+			
+			    window.scrollTo({
+			        top: target.offsetTop,
+			        behavior: 'smooth'
+			    });
+			}
+			</script>
+		
 	</body>
 </html>
