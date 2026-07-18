@@ -4246,10 +4246,6 @@ input, select, textarea {
     object-position: 60% 25%;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Clickable blue diagonal */
 .banner-diagonal {
     position: absolute;
@@ -4289,6 +4285,23 @@ html {
     letter-spacing: .12em;
 
     z-index: 100;
+
+	@keyframes fadeInSeeMore {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    /* Fade in animation */
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeInSeeMore 1s ease forwards;
+    animation-delay: 2.2s; /* Adjust this */
 }
 
 .diagonal-scroll .icon {
