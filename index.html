@@ -177,40 +177,5 @@
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
 
-			<script>
-			function smoothScroll(event, targetId) {
-			    event.preventDefault();
-			
-			    const target = document.getElementById(targetId);
-			    const start = window.pageYOffset;
-			    const end = target.offsetTop;
-			    const distance = end - start;
-			
-			    const duration = 5000; // Change this to 4000 or 5000 for slower
-			
-			    let startTime = null;
-			
-			    function step(currentTime) {
-			        if (!startTime) startTime = currentTime;
-			
-			        const elapsed = currentTime - startTime;
-			        const progress = Math.min(elapsed / duration, 1);
-			
-			        // Ease in and out
-			        const ease = progress < 0.5
-			            ? 2 * progress * progress
-			            : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-			
-			        window.scrollTo(0, start + distance * ease);
-			
-			        if (progress < 1) {
-			            requestAnimationFrame(step);
-			        }
-			    }
-			
-			    requestAnimationFrame(step);
-			}
-			</script>
-		
 	</body>
 </html>
