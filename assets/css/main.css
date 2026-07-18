@@ -4286,22 +4286,15 @@ html {
 
     z-index: 100;
 
-	@keyframes fadeInSeeMore {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .8s ease, transform .8s ease;
+    transition-delay: 2.2s;
 }
-    /* Fade in animation */
+
+body.is-preload .diagonal-scroll {
     opacity: 0;
     transform: translateY(15px);
-    animation: fadeInSeeMore 1s ease forwards;
-    animation-delay: 2.2s; /* Adjust this */
 }
 
 .diagonal-scroll .icon {
