@@ -3372,7 +3372,7 @@ input, select, textarea {
 /* Banner */
 
 		#banner {
-		    min-height: 90vh;
+		    min-height: 95vh;
 		    display: flex;
 		    align-items: center;
 		    justify-content: center;   /* Add this */
