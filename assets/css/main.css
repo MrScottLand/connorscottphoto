@@ -4268,3 +4268,40 @@ html {
     text-decoration: none;
     z-index: 20;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper:first-of-type {
+    position: relative;
+}
+
+.diagonal-scroll {
+    position: absolute;
+    top: -5.2em;
+    right: 3em;
+
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .12em;
+
+    z-index: 100;
+}
+
+.diagonal-scroll .icon {
+    margin-left: .5em;
+    animation: bounceArrow 2s infinite;
+}
+
+@keyframes bounceArrow {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
