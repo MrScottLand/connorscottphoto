@@ -4246,53 +4246,25 @@ input, select, textarea {
     object-position: 60% 25%;
 }
 
-/* Entire blue diagonal is clickable */
-.banner-scroll {
+html {
+    scroll-behavior: smooth;
+}
+
+/* Clickable blue diagonal */
+.banner-diagonal {
     position: absolute;
-    bottom: -2.5em;
     right: 0;
-    width: 38%;
-    height: 9rem;
-    z-index: 100;
-    text-decoration: none;
+    bottom: 0;
+
+    width: 42%;
+    height: 150px;
+
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 0 3rem 2rem 0;
-}
 
-/* Text */
-.banner-scroll span {
-    color: #fff;
-    font-family: Raleway, Helvetica, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: transform .2s ease, opacity .2s ease;
-}
+    padding: 0 2.5rem 1.5rem 0;
 
-/* Hover */
-.banner-scroll:hover span {
-    transform: translateY(-4px);
-    opacity: .8;
-}
-
-/* Arrow animation */
-.banner-scroll i {
-    margin-left: .5rem;
-    animation: scrollArrow 1.8s infinite;
-}
-
-@keyframes scrollArrow {
-    0%,100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(6px);
-    }
-}
-
-html {
-    scroll-behavior: smooth;
+    text-decoration: none;
+    z-index: 20;
 }
