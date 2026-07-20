@@ -4313,3 +4313,30 @@ body.is-preload .diagonal-scroll {
         transform: translateY(6px);
     }
 }
+
+
+    color: var(--text-white) !important;
+}
+
+.text-muted,
+footer p,
+.spotlight-content p {
+    color: var(--text-muted) !important;
+}
+
+/* Cards and Glass Elements */
+.glass-card,
+.spotlight-image {
+    background: rgba(255,255,255,0.05) !important;
+    border-color: rgba(42,157,143,0.2) !important;
+}
+
+.glass-card:hover {
+    border-color: var(--ocean-teal) !important;
+    box-shadow: 0 0 30px rgba(42,157,143,0.1) !important;
+}
+
+/* Dividers */
+.section-divider {
+    background: linear-gradient(90deg, transparent, var(--ocean-teal), var(--ocean-sand), transparent) !important;
+}
