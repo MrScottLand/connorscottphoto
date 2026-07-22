@@ -161,3 +161,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     elements.forEach(el => observer.observe(el));
 });
+
+// --- FADE IN GALLERY ---
+document.addEventListener('DOMContentLoaded', function() {
+    // Select both slide elements AND gallery items
+    const elements = document.querySelectorAll('.slide-in-scroll, .slide-in-left, .gallery-item');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,           // Trigger when 10% visible
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    elements.forEach(el => observer.observe(el));
+});
