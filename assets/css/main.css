@@ -4341,62 +4341,82 @@ footer p,
     background: linear-gradient(90deg, transparent, var(--ocean-teal), var(--ocean-sand), transparent) !important;
 }
 
-/* ============================================
-   FADING GALLERY GRID - 5-6 Columns
-   ============================================ */
+/* ==========================
+   IMMERSIVE MASONRY GALLERY
+   ========================== */
 
-/* Gallery Container */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
-    width: 100%;
-    margin: 2rem auto;
+    column-count: 6;
+    column-gap: 18px;
+
+    max-width: 1900px;
+    width: 96%;
+
+    margin: 4em auto;
 }
 
-/* Each Gallery Item */
 .gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 18px;
+
+    break-inside: avoid;
     overflow: hidden;
-    border-radius: 0.5rem;
+
+    border-radius: 10px;
 }
 
-/* Images */
 .gallery-item img {
     width: 100%;
     height: auto;
+
     display: block;
-    transition: transform 0.4s ease;
+
+    transition: transform .5s ease;
 }
 
-/* Hover Effect */
 .gallery-item:hover img {
     transform: scale(1.05);
 }
 
-/* ============================================
-   RESPONSIVE - Adjust Columns
-   ============================================ */
+/* Responsive */
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width:1600px) {
+
     .gallery {
-        grid-template-columns: repeat(5, 1fr);
+        column-count:5;
     }
+
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width:1300px) {
+
     .gallery {
-        grid-template-columns: repeat(4, 1fr);
+        column-count:4;
     }
+
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width:950px) {
+
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
+        column-count:3;
     }
+
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:700px) {
+
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        column-count:2;
     }
+
+}
+
+@media screen and (max-width:500px) {
+
+    .gallery {
+        column-count:1;
+    }
+
 }
