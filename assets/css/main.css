@@ -4345,14 +4345,15 @@ footer p,
    IMMERSIVE MASONRY GALLERY
    ========================== */
 
-.gallery {
-    columns: 5;
-    column-gap: 18px;
+.gallery{
+    columns:5;
+    column-gap:18px;
 
-    max-width: 1500px;
-    margin: 0 auto;
+    width:96%;
+    max-width:2200px;
+    margin:0 auto;
 
-    padding: 3rem 2rem;
+    padding:2rem 0;
 }
 
 .gallery-item {
@@ -4379,6 +4380,10 @@ footer p,
     transform: scale(1.05);
 }
 
+.wrapper .inner{
+    width:96%;
+    max-width:1900px;
+}
 /* Responsive */
 
 @media screen and (max-width:1600px) {
