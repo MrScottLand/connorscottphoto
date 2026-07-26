@@ -4346,13 +4346,13 @@ footer p,
    ========================== */
 
 .gallery {
-    column-count: 6;
+    columns: 5;
     column-gap: 18px;
 
-    max-width: 1900px;
-    width: 96%;
+    max-width: 1500px;
+    margin: 0 auto;
 
-    margin: 4em auto;
+    padding: 3rem 2rem;
 }
 
 .gallery-item {
