@@ -134,5 +134,23 @@
 <script src="/assets/js/util.js"></script>
 <script src="/assets/js/main.js"></script>
 
+	<script>
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+galleryItems.forEach(item => {
+    observer.observe(item);
+});
+</script>
+	
 </body>
 </html>
