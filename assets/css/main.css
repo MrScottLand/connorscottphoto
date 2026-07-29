@@ -4444,8 +4444,11 @@ footer p,
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
+
     max-width: 1500px;
     margin: 0 auto;
+
+    transform: translateX(-60px);
 }
 
     max-width: 1500px;
