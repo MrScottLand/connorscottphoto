@@ -4442,13 +4442,11 @@ footer p,
 .contact-layout {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 4rem;
 
-    max-width: 1500px;
+    max-width: 1650px;
     margin: 0 auto;
-
-    transform: translateX(-60px);
+    padding: 0 2rem;
 }
 
     max-width: 1500px;
@@ -4457,9 +4455,11 @@ footer p,
 }
 
 .contact-photo {
-    flex: 0 0 36%;
-    margin-left: -60px;   /* Move image left */
-    animation: fadeLeft 1.2s ease;
+    flex: 0 0 28%;
+}
+
+.contact-content {
+    flex: 1;
 }
 
 .contact-photo img {
