@@ -4579,3 +4579,27 @@ footer p,
         width: 100%;
     }
 }
+
+#footer form .field-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5em;
+	align-items: start;
+}
+
+#footer form .field-row .field {
+	width: 100%;
+	margin: 0;
+}
+
+#footer form .field-row label {
+	display: block;
+	margin-bottom: 0.6em;
+}
+
+#footer form .field-row input {
+	width: 100%;
+	height: 3.2em;
+	box-sizing: border-box;
+	margin: 0;
+}
