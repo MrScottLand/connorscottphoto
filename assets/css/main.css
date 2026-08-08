@@ -4529,37 +4529,3 @@ footer p,
 #footer form .actions {
     margin-top: 0;
 }
-
-/* FORM LAYOUT */
-#footer form .fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 2rem;
-}
-
-#footer form .field.full {
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-#footer form .field.half {
-    width: calc(50% - 1rem);
-    margin-bottom: 1.5rem;
-}
-
-/* Make the message a comfortable height */
-#footer form textarea {
-    min-height: 180px;
-}
-
-/* Keep the button close to the last field */
-#footer form .actions {
-    margin-top: 0;
-}
-
-/* Mobile */
-@media screen and (max-width: 736px) {
-    #footer form .field.half {
-        width: 100%;
-    }
-}
