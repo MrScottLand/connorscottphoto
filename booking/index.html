@@ -76,45 +76,45 @@
 								
 								<form method="POST" action="https://formspree.io/f/xlgqwpbz">
 								
-								    <div class="fields">
+									<!-- NAME -->
+									<div class="field field-name">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
 								
-								        <!-- NAME -->
-								        <div class="field full">
-								            <label for="name">Name</label>
-								            <input type="text" name="name" id="name" required />
-								        </div>
-								
-								        <!-- EMAIL -->
-								        <div class="field half">
-								            <label for="email">Email</label>
-								            <input type="email" name="email" id="email" required />
-								        </div>
-								
+									<!-- EMAIL + PHONE -->
 									<div class="field-row">
-									
+								
 										<div class="field">
 											<label for="email">Email</label>
 											<input type="email" name="email" id="email" />
 										</div>
-									
+								
 										<div class="field">
 											<label for="phone">Phone Number</label>
 											<input type="tel" name="phone" id="phone" />
 										</div>
 								
-								        <!-- HOW DID YOU HEAR -->
-								        <div class="field full">
-								            <label for="referral">How did you hear about me?</label>
-								            <input type="text" name="referral" id="referral" />
-								        </div>
+									</div>
 								
-								    </div>
+									<!-- MESSAGE -->
+									<div class="field field-message">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6"></textarea>
+									</div>
 								
-								    <ul class="actions">
-								        <li>
-								            <input type="submit" value="Send Message" />
-								        </li>
-								    </ul>
+									<!-- HOW DID YOU HEAR -->
+									<div class="field field-hear">
+										<label for="hear">How Did You Hear About Me?</label>
+										<input type="text" name="hear" id="hear" />
+									</div>
+								
+									<!-- BUTTON -->
+									<ul class="actions">
+										<li>
+											<input type="submit" value="Send Message" />
+										</li>
+									</ul>
 								
 								</form>
 				
