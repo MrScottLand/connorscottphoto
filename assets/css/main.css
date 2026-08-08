@@ -4603,3 +4603,42 @@ footer p,
 	box-sizing: border-box;
 	margin: 0;
 }
+
+/* =========================================
+   FORCE EMAIL + PHONE TO MATCH
+   ========================================= */
+
+#footer form .field-row {
+	display: flex !important;
+	gap: 1.5em !important;
+	align-items: flex-start !important;
+}
+
+#footer form .field-row .field {
+	flex: 1 1 0 !important;
+	width: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* FORCE BOTH INPUTS TO THE EXACT SAME SIZE */
+#footer form .field-row input[type="email"],
+#footer form .field-row input[type="tel"] {
+	display: block !important;
+	width: 100% !important;
+	height: 3.2em !important;
+	min-height: 3.2em !important;
+	max-height: 3.2em !important;
+	padding: 0 1em !important;
+	margin: 0 !important;
+	box-sizing: border-box !important;
+	line-height: normal !important;
+}
+
+/* Keep the labels identical */
+#footer form .field-row label {
+	display: block !important;
+	height: auto !important;
+	margin: 0 0 0.6em 0 !important;
+	padding: 0 !important;
+}
