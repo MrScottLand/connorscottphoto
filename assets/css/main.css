@@ -4489,87 +4489,77 @@ footer p,
     }
 }
 
-/* =========================================
-   CONTACT FORM LAYOUT
-   ========================================= */
-
-#footer form {
-	width: 100%;
-	margin: 0;
+/* CONTACT FORM SPACING */
+#footer form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
 }
 
-/* All form fields */
 #footer form .field {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 
-/* Name — full width */
-#footer form .field-name {
-	width: 100%;
+/* NAME - full width */
+#footer form .field:not(.half) {
+    width: 100%;
 }
 
-/* Email + Phone — same row */
-#footer form .field-row {
-	display: flex;
-	gap: 1.5em;
-	width: 100%;
+/* EMAIL + PHONE - side by side */
+#footer form .field.half {
+    width: calc(50% - 1rem);
 }
 
-#footer form .field-row .field {
-	width: 50%;
-	margin-bottom: 1.5em;
+/* Space between Email and Phone */
+#footer form .field.half:first-of-type {
+    margin-right: 2rem;
 }
 
-/* Message — full width */
-#footer form .field-message {
-	width: 100%;
-	margin-bottom: 1.5em;
-}
-
-/* How did you hear about me — full width */
-#footer form .field-hear {
-	width: 100%;
-	margin-bottom: 1.5em;
-}
-
-/* Labels */
-#footer form label {
-	display: block;
-	margin-bottom: 0.6em;
-}
-
-/* Text inputs */
-#footer form input[type="text"],
-#footer form input[type="email"],
-#footer form input[type="tel"],
+/* Message */
 #footer form textarea {
-	width: 100%;
-	box-sizing: border-box;
+    min-height: 180px;
 }
 
-/* Message box */
-#footer form textarea {
-	min-height: 14em;
-	resize: vertical;
+/* How did you hear */
+#footer form .field:last-of-type {
+    margin-bottom: 1.5rem;
 }
 
 /* Send button */
 #footer form .actions {
-	margin-top: 0.5em;
+    margin-top: 0;
 }
 
-/* =========================================
-   MOBILE
-   ========================================= */
+/* FORM LAYOUT */
+#footer form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+}
 
+#footer form .field.full {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+#footer form .field.half {
+    width: calc(50% - 1rem);
+    margin-bottom: 1.5rem;
+}
+
+/* Make the message a comfortable height */
+#footer form textarea {
+    min-height: 180px;
+}
+
+/* Keep the button close to the last field */
+#footer form .actions {
+    margin-top: 0;
+}
+
+/* Mobile */
 @media screen and (max-width: 736px) {
-
-	#footer form .field-row {
-		display: block;
-	}
-
-	#footer form .field-row .field {
-		width: 100%;
-	}
-
+    #footer form .field.half {
+        width: 100%;
+    }
 }
