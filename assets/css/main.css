@@ -4488,3 +4488,78 @@ footer p,
         height: 450px;
     }
 }
+
+/* CONTACT FORM SPACING */
+#footer form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+#footer form .field {
+    margin-bottom: 1.5rem;
+}
+
+/* NAME - full width */
+#footer form .field:not(.half) {
+    width: 100%;
+}
+
+/* EMAIL + PHONE - side by side */
+#footer form .field.half {
+    width: calc(50% - 1rem);
+}
+
+/* Space between Email and Phone */
+#footer form .field.half:first-of-type {
+    margin-right: 2rem;
+}
+
+/* Message */
+#footer form textarea {
+    min-height: 180px;
+}
+
+/* How did you hear */
+#footer form .field:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+/* Send button */
+#footer form .actions {
+    margin-top: 0;
+}
+
+/* FORM LAYOUT */
+#footer form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+}
+
+#footer form .field.full {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+#footer form .field.half {
+    width: calc(50% - 1rem);
+    margin-bottom: 1.5rem;
+}
+
+/* Make the message a comfortable height */
+#footer form textarea {
+    min-height: 180px;
+}
+
+/* Keep the button close to the last field */
+#footer form .actions {
+    margin-top: 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+    #footer form .field.half {
+        width: 100%;
+    }
+}
