@@ -4563,3 +4563,24 @@ footer p,
         width: 100%;
     }
 }
+
+/* EMAIL + PHONE — SAME SIZE AND LEVEL */
+#footer form .field-row {
+	display: flex;
+	gap: 1.5em;
+	width: 100%;
+	align-items: flex-start;
+}
+
+#footer form .field-row .field {
+	width: 50%;
+	margin: 0;
+}
+
+/* Make both input boxes identical */
+#footer form .field-row input {
+	width: 100%;
+	height: 3.2em;
+	box-sizing: border-box;
+	margin: 0;
+}
