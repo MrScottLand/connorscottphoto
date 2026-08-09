@@ -4529,3 +4529,28 @@ footer p,
 #footer form .actions {
     margin-top: 0;
 }
+
+/* FORCED COLOR OVERRIDE - DELETE THIS LATER */
+body, #wrapper, .bg {
+    background-color: #1a1e24 !important;
+}
+
+h1, h2, h3, p, .inner, .content {
+    color: #ece7e1 !important;
+}
+
+a, .button, .button.primary {
+    color: #d48c70 !important;
+    border-color: #d48c70 !important;
+}
+
+.button.primary {
+    background-color: #d48c70 !important;
+    border-color: #d48c70 !important;
+    color: #ffffff !important;
+}
+
+.button.primary:hover {
+    background-color: #c47a60 !important;
+    border-color: #c47a60 !important;
+}
