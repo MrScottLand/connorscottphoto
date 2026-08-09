@@ -4531,17 +4531,12 @@ footer p,
 }
 
 /* =========================================================
-   SOLID STATE — COMPLETE PHOTOGRAPHY COLOR OVERRIDE
-   Ocean / Forest + Warm Terracotta
-   ========================================================= */
-
-
-/* =========================================================
-   COLOR PALETTE
+   SOLID STATE — COLOR ONLY
+   Does NOT modify the diagonal/slant system
    ========================================================= */
 
 :root {
-	--photo-black: #10191A;
+	--photo-bg: #10191A;
 	--photo-dark: #172827;
 	--photo-teal: #223B39;
 	--photo-sage: #718F87;
@@ -4554,27 +4549,22 @@ footer p,
 }
 
 
-/* =========================================================
-   BODY
-   ========================================================= */
+/* Main page */
 
-html,
 body {
-	background: #10191A !important;
-	color: #D5CDC2 !important;
+	background-color: #10191A;
+	color: #D5CDC2;
 }
+
+
+/* Text */
 
 body,
 input,
 select,
 textarea {
-	color: #D5CDC2 !important;
+	color: #D5CDC2;
 }
-
-
-/* =========================================================
-   HEADINGS
-   ========================================================= */
 
 h1,
 h2,
@@ -4582,138 +4572,59 @@ h3,
 h4,
 h5,
 h6 {
-	color: #F2EDE5 !important;
+	color: #F2EDE5;
 }
 
 
-/* =========================================================
-   LINKS
-   ========================================================= */
+/* Links */
 
 a {
-	color: #718F87 !important;
-	border-bottom-color: rgba(113, 143, 135, 0.35) !important;
+	color: #718F87;
 }
 
 a:hover {
-	color: #E2A08B !important;
-	border-bottom-color: #E2A08B !important;
+	color: #E2A08B;
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* Header */
 
 #header {
-	background: #10191A !important;
-}
-
-#header.alt {
-	background: transparent !important;
+	background-color: #10191A;
 }
 
 
-/* =========================================================
-   MENU
-   ========================================================= */
-
-#menu {
-	background: #10191A !important;
-}
-
-#menu ul.links > li {
-	border-top-color: rgba(242, 237, 229, 0.12) !important;
-}
-
-#menu .close {
-	color: #D5CDC2 !important;
-}
-
-
-/* =========================================================
-   HERO / BANNER
-   ========================================================= */
+/* Banner */
 
 #banner {
-	background: #10191A !important;
-}
-
-#banner h1 {
-	color: #F2EDE5 !important;
-}
-
-#banner p {
-	color: #D5CDC2 !important;
+	background-color: #10191A;
 }
 
 
-/* =========================================================
-   MAIN WRAPPERS
-   ========================================================= */
-
-.wrapper {
-	background: #172827 !important;
-}
+/* Solid State sections */
 
 .wrapper.style1 {
-	background: #223B39 !important;
+	background-color: #223B39;
 }
 
 .wrapper.style2 {
-	background: #172827 !important;
+	background-color: #172827;
 }
 
 .wrapper.style3 {
-	background: #10191A !important;
+	background-color: #10191A;
 }
 
 
-/* =========================================================
-   WRAPPER DIAGONALS
-   ========================================================= */
-
-.wrapper:before,
-.wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23172827;' /%3E%3C/svg%3E") !important;
-
-	box-shadow:
-		inset 0 -1px 0 0 #172827,
-		0 1px 0 0 #172827 !important;
-}
-
-
-/* =========================================================
-   BORDERS
-   ========================================================= */
-
-.wrapper,
-.features article,
-.spotlights > section,
-ul.alt li,
-hr,
-table,
-table tbody tr,
-table tfoot tr,
-table thead tr,
-table td,
-table th {
-	border-color: rgba(242, 237, 229, 0.15) !important;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
+/* Buttons */
 
 .button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	background-color: #C9826D !important;
-	box-shadow: inset 0 0 0 2px #C9826D !important;
-	color: #FFFFFF !important;
+	background-color: #C9826D;
+	color: #fff !important;
 }
 
 
@@ -4724,39 +4635,12 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-	background-color: #E2A08B !important;
-	box-shadow: inset 0 0 0 2px #E2A08B !important;
+	background-color: #E2A08B;
 	color: #10191A !important;
 }
 
 
-/* Button active */
-
-.button:active,
-button:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active {
-	background-color: #B86F5C !important;
-}
-
-
-/* =========================================================
-   ICONS
-   ========================================================= */
-
-.icon {
-	color: #718F87 !important;
-}
-
-.icon.major {
-	color: #C9826D !important;
-}
-
-
-/* =========================================================
-   FORM FIELDS
-   ========================================================= */
+/* Form fields */
 
 input[type="text"],
 input[type="password"],
@@ -4766,9 +4650,9 @@ input[type="search"],
 input[type="url"],
 select,
 textarea {
-	background-color: #172827 !important;
-	border-color: rgba(242, 237, 229, 0.18) !important;
-	color: #F2EDE5 !important;
+	background-color: #172827;
+	color: #F2EDE5;
+	border-color: rgba(242, 237, 229, 0.18);
 }
 
 
@@ -4782,180 +4666,44 @@ input[type="search"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-	border-color: #718F87 !important;
-	box-shadow: 0 0 0 1px #718F87 !important;
-}
-
-
-/* Placeholder */
-
-input::placeholder,
-textarea::placeholder {
-	color: rgba(213, 205, 194, 0.55) !important;
+	border-color: #718F87;
 }
 
 
 /* Labels */
 
 label {
-	color: #F2EDE5 !important;
+	color: #F2EDE5;
 }
 
 
-/* =========================================================
-   SELECT DROPDOWNS
-   ========================================================= */
+/* Icons */
 
-select {
-	background-color: #172827 !important;
-	color: #F2EDE5 !important;
+.icon {
+	color: #718F87;
 }
 
 
-/* =========================================================
-   IMAGE / FIGURE BORDERS
-   ========================================================= */
-
-.image {
-	border-color: rgba(242, 237, 229, 0.15) !important;
-}
-
-
-/* =========================================================
-   SPOTLIGHTS
-   ========================================================= */
-
-.spotlights > section {
-	background-color: #172827 !important;
-}
-
-.spotlights > section:nth-child(2n) {
-	background-color: #223B39 !important;
-}
-
-
-/* =========================================================
-   FEATURES
-   ========================================================= */
-
-.features article {
-	border-color: rgba(242, 237, 229, 0.15) !important;
-}
-
-
-/* =========================================================
-   CONTACT / FOOTER
-   ========================================================= */
+/* Footer */
 
 #footer {
-	background: #10191A !important;
+	background-color: #10191A;
 }
 
-#footer h2 {
-	color: #F2EDE5 !important;
-}
+
+/* Footer text */
 
 #footer p {
-	color: #D5CDC2 !important;
-}
-
-#footer .copyright {
-	color: rgba(213, 205, 194, 0.5) !important;
+	color: #D5CDC2;
 }
 
 
-/* =========================================================
-   SOCIAL ICONS
-   ========================================================= */
+/* Footer links */
 
-#footer .icons a {
-	color: #718F87 !important;
+#footer a {
+	color: #718F87;
 }
 
-#footer .icons a:hover {
-	color: #E2A08B !important;
-}
-
-
-/* =========================================================
-   MOBILE MENU BUTTON
-   ========================================================= */
-
-#header .menu {
-	color: #F2EDE5 !important;
-}
-
-
-/* =========================================================
-   BLOCKQUOTES
-   ========================================================= */
-
-blockquote {
-	border-left-color: #718F87 !important;
-	color: #D5CDC2 !important;
-}
-
-
-/* =========================================================
-   CODE
-   ========================================================= */
-
-code {
-	background: rgba(242, 237, 229, 0.06) !important;
-	border-color: rgba(242, 237, 229, 0.12) !important;
-	color: #F2EDE5 !important;
-}
-
-
-/* =========================================================
-   TABLES
-   ========================================================= */
-
-table thead {
-	background: #223B39 !important;
-}
-
-table tbody tr:nth-child(2n + 1) {
-	background-color: rgba(242, 237, 229, 0.025) !important;
-}
-
-
-/* =========================================================
-   HORIZONTAL RULES
-   ========================================================= */
-
-hr {
-	border-bottom-color: rgba(242, 237, 229, 0.15) !important;
-}
-
-
-/* =========================================================
-   SELECTION
-   ========================================================= */
-
-::selection {
-	background: #C9826D !important;
-	color: #FFFFFF !important;
-}
-
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-::-webkit-scrollbar-track {
-	background: #10191A;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #223B39;
-	border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: #718F87;
+#footer a:hover {
+	color: #E2A08B;
 }
