@@ -4529,3 +4529,11 @@ footer p,
 #footer form .actions {
     margin-top: 0;
 }
+
+:root {
+    --color-bg: #1a1e24;      /* Deep charcoal-teal - premium & calm */
+    --color-fg: #ece7e1;      /* Warm off-white - inviting, not cold */
+    --color-accent: #d48c70;  /* Terracotta/peach - friendly & human */
+    --color-accent2: #e8a28c; /* Lighter peach - for hover effects */
+    --color-alt: #2a323a;     /* For SVG background shapes */
+}
