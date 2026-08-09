@@ -41,14 +41,14 @@
 	);
 
 // Palette.
-	$palette: (
-		bg:						#2e3141,
-		fg:						#ffffff,
-		fg-bold:				#ffffff,
-		fg-light:				rgba(255,255,255,0.35),
-		border:					rgba(255,255,255,0.125),
-		border-bg:				rgba(255,255,255,0.025),
-		border2:				rgba(255,255,255,0.25),
-		border2-bg:				rgba(255,255,255,0.075),
-		accent:					#4c5c96
-	);
+$palette: (
+    bg:           #1a1e24,
+    fg:           #ece7e1,
+    fg-bold:      #f5f0ea,
+    fg-light:     rgba(236,231,225,0.35),
+    border:       rgba(236,231,225,0.125),
+    border-bg:    rgba(236,231,225,0.025),
+    border2:      rgba(236,231,225,0.25),
+    border2-bg:   rgba(236,231,225,0.075),
+    accent:       #d48c70
+);
