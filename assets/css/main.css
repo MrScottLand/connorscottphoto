@@ -4531,36 +4531,50 @@ footer p,
 }
 
 /* =========================================================
-   PHOTOGRAPHY WEBSITE — OCEAN / FOREST PREMIUM PALETTE
+   SOLID STATE — COMPLETE PHOTOGRAPHY COLOR OVERRIDE
+   Ocean / Forest + Warm Terracotta
+   ========================================================= */
+
+
+/* =========================================================
+   COLOR PALETTE
    ========================================================= */
 
 :root {
-	--deep: #10191A;
-	--dark-teal: #172827;
-	--teal: #223B39;
-	--sage: #718F87;
+	--photo-black: #10191A;
+	--photo-dark: #172827;
+	--photo-teal: #223B39;
+	--photo-sage: #718F87;
 
-	--ivory: #F2EDE5;
-	--warm-gray: #D5CDC2;
+	--photo-ivory: #F2EDE5;
+	--photo-beige: #D5CDC2;
 
-	--terracotta: #C9826D;
-	--peach: #E2A08B;
+	--photo-terra: #C9826D;
+	--photo-peach: #E2A08B;
 }
 
 
-/* =========================
+/* =========================================================
    BODY
-   ========================= */
+   ========================================================= */
 
+html,
 body {
-	background: var(--deep);
-	color: var(--warm-gray);
+	background: #10191A !important;
+	color: #D5CDC2 !important;
+}
+
+body,
+input,
+select,
+textarea {
+	color: #D5CDC2 !important;
 }
 
 
-/* =========================
+/* =========================================================
    HEADINGS
-   ========================= */
+   ========================================================= */
 
 h1,
 h2,
@@ -4568,106 +4582,138 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--ivory);
+	color: #F2EDE5 !important;
 }
 
 
-/* =========================
+/* =========================================================
    LINKS
-   ========================= */
+   ========================================================= */
 
 a {
-	color: var(--sage);
-	border-bottom-color: rgba(113, 143, 135, 0.35);
+	color: #718F87 !important;
+	border-bottom-color: rgba(113, 143, 135, 0.35) !important;
 }
 
 a:hover {
-	color: var(--peach);
-	border-bottom-color: var(--peach);
+	color: #E2A08B !important;
+	border-bottom-color: #E2A08B !important;
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-   ========================= */
+   ========================================================= */
 
 #header {
-	background-color: var(--deep);
+	background: #10191A !important;
+}
+
+#header.alt {
+	background: transparent !important;
 }
 
 
-/* =========================
+/* =========================================================
+   MENU
+   ========================================================= */
+
+#menu {
+	background: #10191A !important;
+}
+
+#menu ul.links > li {
+	border-top-color: rgba(242, 237, 229, 0.12) !important;
+}
+
+#menu .close {
+	color: #D5CDC2 !important;
+}
+
+
+/* =========================================================
    HERO / BANNER
-   ========================= */
+   ========================================================= */
 
 #banner {
-	background-color: var(--deep);
+	background: #10191A !important;
 }
 
 #banner h1 {
-	color: var(--ivory);
+	color: #F2EDE5 !important;
 }
 
 #banner p {
-	color: var(--warm-gray);
+	color: #D5CDC2 !important;
 }
 
 
-/* =========================
-   SOLID STATE WRAPPERS
-   ========================= */
+/* =========================================================
+   MAIN WRAPPERS
+   ========================================================= */
 
 .wrapper {
-	background-color: var(--dark-teal);
+	background: #172827 !important;
 }
 
 .wrapper.style1 {
-	background-color: var(--teal);
+	background: #223B39 !important;
 }
 
 .wrapper.style2 {
-	background-color: var(--dark-teal);
+	background: #172827 !important;
 }
 
 .wrapper.style3 {
-	background-color: var(--deep);
+	background: #10191A !important;
 }
 
 
-/* =========================
-   DIAGONAL SVG SECTIONS
-   ========================= */
+/* =========================================================
+   WRAPPER DIAGONALS
+   ========================================================= */
 
 .wrapper:before,
 .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23172827;' /%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23172827;' /%3E%3C/svg%3E") !important;
+
+	box-shadow:
+		inset 0 -1px 0 0 #172827,
+		0 1px 0 0 #172827 !important;
 }
 
 
-/* =========================
+/* =========================================================
    BORDERS
-   ========================= */
+   ========================================================= */
 
 .wrapper,
 .features article,
 .spotlights > section,
-ul.alt li {
-	border-color: rgba(242, 237, 229, 0.16);
+ul.alt li,
+hr,
+table,
+table tbody tr,
+table tfoot tr,
+table thead tr,
+table td,
+table th {
+	border-color: rgba(242, 237, 229, 0.15) !important;
 }
 
 
-/* =========================
+/* =========================================================
    BUTTONS
-   ========================= */
+   ========================================================= */
 
 .button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	background-color: var(--terracotta);
-	box-shadow: inset 0 0 0 2px var(--terracotta);
-	color: #fff !important;
+	background-color: #C9826D !important;
+	box-shadow: inset 0 0 0 2px #C9826D !important;
+	color: #FFFFFF !important;
 }
 
 
@@ -4678,30 +4724,39 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-	background-color: var(--peach);
-	box-shadow: inset 0 0 0 2px var(--peach);
-	color: var(--deep) !important;
+	background-color: #E2A08B !important;
+	box-shadow: inset 0 0 0 2px #E2A08B !important;
+	color: #10191A !important;
 }
 
 
-/* =========================
-   OUTLINE BUTTONS
-   ========================= */
+/* Button active */
 
-.button.primary {
-	background-color: var(--terracotta);
-	color: #fff !important;
-}
-
-.button.primary:hover {
-	background-color: var(--peach);
-	color: var(--deep) !important;
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+	background-color: #B86F5C !important;
 }
 
 
-/* =========================
-   FORMS
-   ========================= */
+/* =========================================================
+   ICONS
+   ========================================================= */
+
+.icon {
+	color: #718F87 !important;
+}
+
+.icon.major {
+	color: #C9826D !important;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
 
 input[type="text"],
 input[type="password"],
@@ -4711,11 +4766,13 @@ input[type="search"],
 input[type="url"],
 select,
 textarea {
-	background-color: rgba(16, 25, 26, 0.55);
-	border-color: rgba(242, 237, 229, 0.18);
-	color: var(--ivory);
+	background-color: #172827 !important;
+	border-color: rgba(242, 237, 229, 0.18) !important;
+	color: #F2EDE5 !important;
 }
 
+
+/* Form focus */
 
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -4725,104 +4782,180 @@ input[type="search"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-	border-color: var(--sage);
-	box-shadow: 0 0 0 1px var(--sage);
+	border-color: #718F87 !important;
+	box-shadow: 0 0 0 1px #718F87 !important;
 }
 
 
-/* Placeholder text */
+/* Placeholder */
 
 input::placeholder,
 textarea::placeholder {
-	color: rgba(213, 205, 194, 0.55);
+	color: rgba(213, 205, 194, 0.55) !important;
 }
 
 
-/* =========================
-   FORM LABELS
-   ========================= */
+/* Labels */
 
 label {
-	color: var(--ivory);
+	color: #F2EDE5 !important;
 }
 
 
-/* =========================
-   ICONS
-   ========================= */
+/* =========================================================
+   SELECT DROPDOWNS
+   ========================================================= */
 
-.icon {
-	color: var(--sage);
-}
-
-.icon.major {
-	color: var(--terracotta);
+select {
+	background-color: #172827 !important;
+	color: #F2EDE5 !important;
 }
 
 
-/* =========================
-   MENU
-   ========================= */
+/* =========================================================
+   IMAGE / FIGURE BORDERS
+   ========================================================= */
 
-#menu {
-	background-color: var(--deep);
-}
-
-#menu ul.links > li {
-	border-top-color: rgba(242, 237, 229, 0.12);
+.image {
+	border-color: rgba(242, 237, 229, 0.15) !important;
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
+/* =========================================================
+   SPOTLIGHTS
+   ========================================================= */
+
+.spotlights > section {
+	background-color: #172827 !important;
+}
+
+.spotlights > section:nth-child(2n) {
+	background-color: #223B39 !important;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.features article {
+	border-color: rgba(242, 237, 229, 0.15) !important;
+}
+
+
+/* =========================================================
+   CONTACT / FOOTER
+   ========================================================= */
 
 #footer {
-	background-color: var(--deep);
+	background: #10191A !important;
+}
+
+#footer h2 {
+	color: #F2EDE5 !important;
+}
+
+#footer p {
+	color: #D5CDC2 !important;
 }
 
 #footer .copyright {
-	color: rgba(213, 205, 194, 0.55);
+	color: rgba(213, 205, 194, 0.5) !important;
 }
 
 
-/* =========================
-   SPECIAL HIGHLIGHTS
-   ========================= */
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
 
-strong,
-b {
-	color: var(--ivory);
+#footer .icons a {
+	color: #718F87 !important;
+}
+
+#footer .icons a:hover {
+	color: #E2A08B !important;
 }
 
 
-/* =========================
-   SELECTION COLOR
-   ========================= */
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+#header .menu {
+	color: #F2EDE5 !important;
+}
+
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
+blockquote {
+	border-left-color: #718F87 !important;
+	color: #D5CDC2 !important;
+}
+
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+code {
+	background: rgba(242, 237, 229, 0.06) !important;
+	border-color: rgba(242, 237, 229, 0.12) !important;
+	color: #F2EDE5 !important;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table thead {
+	background: #223B39 !important;
+}
+
+table tbody tr:nth-child(2n + 1) {
+	background-color: rgba(242, 237, 229, 0.025) !important;
+}
+
+
+/* =========================================================
+   HORIZONTAL RULES
+   ========================================================= */
+
+hr {
+	border-bottom-color: rgba(242, 237, 229, 0.15) !important;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
 
 ::selection {
-	background: var(--terracotta);
-	color: #fff;
+	background: #C9826D !important;
+	color: #FFFFFF !important;
 }
 
 
-/* =========================
+/* =========================================================
    SCROLLBAR
-   ========================= */
+   ========================================================= */
 
 ::-webkit-scrollbar {
 	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--deep);
+	background: #10191A;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--teal);
+	background: #223B39;
 	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--sage);
+	background: #718F87;
 }
