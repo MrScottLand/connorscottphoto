@@ -2,136 +2,709 @@
 <!--
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Free for personal and commercial use under the CCA 3.0 license
 -->
 <html>
 	<head>
-		<title>Prices | Connor Scott Photography</title>
+		<title>Senior Photography Prices | Connor Scott Photography</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+		<!-- Pricing Page Styles -->
+		<style>
+
+			/* =========================================
+			   PRICING PAGE
+			   ========================================= */
+
+			.pricing-intro {
+				max-width: 800px;
+				margin: 0 auto 4em auto;
+				text-align: center;
+			}
+
+			.pricing-intro h2 {
+				margin-bottom: 0.5em;
+			}
+
+			.pricing-intro p {
+				font-size: 1.1em;
+				line-height: 1.8;
+				opacity: 0.85;
+			}
+
+
+			/* =========================================
+			   PRICING CARDS
+			   ========================================= */
+
+			.pricing-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2em;
+				align-items: stretch;
+				margin: 3em 0;
+			}
+
+			.pricing-card {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				background: #172827;
+				border: 1px solid rgba(242, 237, 229, 0.14);
+				border-radius: 8px;
+				padding: 2.5em 2em;
+				transition:
+					transform 0.35s ease,
+					border-color 0.35s ease,
+					box-shadow 0.35s ease;
+			}
+
+			.pricing-card:hover {
+				transform: translateY(-8px);
+				border-color: rgba(113, 143, 135, 0.65);
+				box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+			}
+
+
+			/* =========================================
+			   MOST POPULAR
+			   ========================================= */
+
+			.pricing-card.featured {
+				background: #223B39;
+				border-color: #C9826D;
+				transform: translateY(-12px);
+				box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+			}
+
+			.pricing-card.featured:hover {
+				transform: translateY(-18px);
+				border-color: #E2A08B;
+			}
+
+			.popular-badge {
+				position: absolute;
+				top: -14px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: #C9826D;
+				color: #FFFFFF;
+				padding: 0.45em 1.2em;
+				border-radius: 30px;
+				font-size: 0.75em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+
+
+			/* =========================================
+			   CARD CONTENT
+			   ========================================= */
+
+			.pricing-card h3 {
+				margin-bottom: 0.35em;
+				color: #F2EDE5;
+			}
+
+			.pricing-card .package-description {
+				min-height: 3.5em;
+				margin-bottom: 1.5em;
+				opacity: 0.8;
+			}
+
+			.price {
+				font-size: 3em;
+				font-weight: 700;
+				line-height: 1;
+				color: #C9826D;
+				margin-bottom: 0.2em;
+			}
+
+			.price-note {
+				font-size: 0.8em;
+				opacity: 0.6;
+				margin-bottom: 2em;
+			}
+
+
+			/* =========================================
+			   PACKAGE DETAILS
+			   ========================================= */
+
+			.package-details {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 2em 0;
+				border-top: 1px solid rgba(242, 237, 229, 0.12);
+			}
+
+			.package-details li {
+				padding: 0.9em 0;
+				border-bottom: 1px solid rgba(242, 237, 229, 0.10);
+			}
+
+			.package-details li strong {
+				color: #F2EDE5;
+			}
+
+			.package-details li span {
+				float: right;
+				color: #718F87;
+				font-weight: 600;
+			}
+
+
+			/* =========================================
+			   CARD BUTTON
+			   ========================================= */
+
+			.pricing-card .button {
+				margin-top: auto;
+				width: 100%;
+				text-align: center;
+			}
+
+
+			/* =========================================
+			   WHY SECTION
+			   ========================================= */
+
+			.pricing-note {
+				margin: 5em auto 0 auto;
+				max-width: 900px;
+				padding: 2.5em;
+				background: rgba(16, 25, 26, 0.35);
+				border: 1px solid rgba(242, 237, 229, 0.12);
+				border-radius: 8px;
+			}
+
+			.pricing-note h3 {
+				color: #F2EDE5;
+				margin-bottom: 0.7em;
+			}
+
+			.pricing-note p {
+				margin-bottom: 0;
+			}
+
+
+			/* =========================================
+			   BOTTOM CTA
+			   ========================================= */
+
+			.pricing-cta {
+				text-align: center;
+				padding: 5em 0 2em 0;
+			}
+
+			.pricing-cta h2 {
+				margin-bottom: 0.5em;
+			}
+
+			.pricing-cta p {
+				max-width: 650px;
+				margin: 0 auto 2em auto;
+			}
+
+
+			/* =========================================
+			   MOBILE
+			   ========================================= */
+
+			@media screen and (max-width: 980px) {
+
+				.pricing-grid {
+					grid-template-columns: 1fr;
+					max-width: 600px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.pricing-card.featured {
+					transform: none;
+				}
+
+				.pricing-card.featured:hover {
+					transform: translateY(-8px);
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+
+				.pricing-card {
+					padding: 2em 1.5em;
+				}
+
+				.price {
+					font-size: 2.5em;
+				}
+
+				.pricing-note {
+					padding: 1.5em;
+				}
+			}
+
+		</style>
 	</head>
+
 	<body class="is-preload">
 
 		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Solid State</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="https://connorscottphoto.com">Home</a></li>
-								<li><a href="https://connorscottphoto.com/gallery/">Gallery</a></li>
-								<li><a href="https://connorscottphoto.com/prices/">Prices</a></li>
-								<li><a href="https://connorscottphoto.com/about/">About Me</a></li>
-								<li><a href="https://connorscottphoto.com/booking/">Book An Appointment</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
+			<!-- Header -->
+			<header id="header">
+
+				<h1>
+					<a href="https://connorscottphoto.com">
+						Connor Scott Photography
+					</a>
+				</h1>
+
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+
+			</header>
+
+
+			<!-- Menu -->
+			<nav id="menu">
+
+				<div class="inner">
+
+					<h2>Menu</h2>
+
+					<ul class="links">
+						<li><a href="https://connorscottphoto.com">Home</a></li>
+						<li><a href="https://connorscottphoto.com/gallery/">Gallery</a></li>
+						<li><a href="https://connorscottphoto.com/prices/">Prices</a></li>
+						<li><a href="https://connorscottphoto.com/about/">About Me</a></li>
+						<li><a href="https://connorscottphoto.com/booking/">Book An Appointment</a></li>
+					</ul>
+
+					<a href="#" class="close">Close</a>
+
+				</div>
+
+			</nav>
+
+
+			<!-- =========================================
+			     PRICING PAGE
+			     ========================================= -->
+
+			<section id="wrapper">
+
+
+				<!-- Page Header -->
+				<header>
+
+					<div class="inner">
+
+						<h2>Senior Photography</h2>
+
+						<p>
+							Choose the session that fits your vision.
+						</p>
+
+					</div>
+
+				</header>
+
+
+				<!-- Main Content -->
+				<div class="wrapper">
+
+					<div class="inner">
+
+
+						<!-- Intro -->
+						<div class="pricing-intro">
+
+							<h2 class="major">
+								Your Senior Session
+							</h2>
+
+							<p>
+								Your senior photos should feel like you.
+								Whether you want something simple and natural
+								or an entire afternoon creating something
+								unforgettable, there's a session for you.
+							</p>
+
 						</div>
-					</nav>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Generic</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
-							</div>
-						</header>
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
+						<!-- Pricing Cards -->
+						<div class="pricing-grid">
 
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+							<!-- =====================================
+							     MINI SESSION
+							     ===================================== -->
 
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<article class="pricing-card">
 
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
+								<h3>Mini</h3>
 
+								<p class="package-description">
+									A shorter session for seniors who want
+									a simple collection of beautiful photos.
+								</p>
+
+								<div class="price">
+									$175
 								</div>
-							</div>
 
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
+								<div class="price-note">
+									One-time session price
 								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+
+								<ul class="package-details">
+
+									<li>
+										<strong>Session</strong>
+										<span>1 hour</span>
+									</li>
+
+									<li>
+										<strong>Location</strong>
+										<span>1</span>
+									</li>
+
+									<li>
+										<strong>Outfits</strong>
+										<span>1–2</span>
+									</li>
+
+									<li>
+										<strong>Edited Photos</strong>
+										<span>15</span>
+									</li>
+
+									<li>
+										<strong>Printed Photos</strong>
+										<span>—</span>
+									</li>
+
 								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
 
-			</div>
+								<a
+									href="https://connorscottphoto.com/booking/"
+									class="button"
+								>
+									Book Mini
+								</a>
+
+							</article>
+
+
+							<!-- =====================================
+							     STANDARD SESSION
+							     ===================================== -->
+
+							<article class="pricing-card featured">
+
+								<div class="popular-badge">
+									Most Popular
+								</div>
+
+								<h3>Standard</h3>
+
+								<p class="package-description">
+									The perfect balance of variety,
+									locations, outfits, and time.
+								</p>
+
+								<div class="price">
+									$375
+								</div>
+
+								<div class="price-note">
+									One-time session price
+								</div>
+
+								<ul class="package-details">
+
+									<li>
+										<strong>Session</strong>
+										<span>2 hours</span>
+									</li>
+
+									<li>
+										<strong>Locations</strong>
+										<span>Up to 2</span>
+									</li>
+
+									<li>
+										<strong>Outfits</strong>
+										<span>2–3</span>
+									</li>
+
+									<li>
+										<strong>Edited Photos</strong>
+										<span>40</span>
+									</li>
+
+									<li>
+										<strong>Printed Photos</strong>
+										<span>10</span>
+									</li>
+
+								</ul>
+
+								<a
+									href="https://connorscottphoto.com/booking/"
+									class="button"
+								>
+									Book Standard
+								</a>
+
+							</article>
+
+
+							<!-- =====================================
+							     DELUXE SESSION
+							     ===================================== -->
+
+							<article class="pricing-card">
+
+								<h3>Deluxe</h3>
+
+								<p class="package-description">
+									The full experience for seniors who
+									want plenty of variety and room to create.
+								</p>
+
+								<div class="price">
+									$650
+								</div>
+
+								<div class="price-note">
+									One-time session price
+								</div>
+
+								<ul class="package-details">
+
+									<li>
+										<strong>Session</strong>
+										<span>3 hours</span>
+									</li>
+
+									<li>
+										<strong>Locations</strong>
+										<span>Up to 3</span>
+									</li>
+
+									<li>
+										<strong>Outfits</strong>
+										<span>3–4</span>
+									</li>
+
+									<li>
+										<strong>Edited Photos</strong>
+										<span>75</span>
+									</li>
+
+									<li>
+										<strong>Printed Photos</strong>
+										<span>25</span>
+									</li>
+
+								</ul>
+
+								<a
+									href="https://connorscottphoto.com/booking/"
+									class="button"
+								>
+									Book Deluxe
+								</a>
+
+							</article>
+
+
+						</div>
+
+
+						<!-- =========================================
+						     WHAT'S INCLUDED
+						     ========================================= -->
+
+						<div class="pricing-note">
+
+							<h3 class="major">
+								Every Session Includes
+							</h3>
+
+							<p>
+								Professional editing, an online gallery of
+								your finished images, planning help before
+								your session, and a relaxed photography
+								experience focused on making your senior
+								photos feel personal and authentic.
+							</p>
+
+						</div>
+
+
+						<!-- =========================================
+						     CTA
+						     ========================================= -->
+
+						<div class="pricing-cta">
+
+							<h2>
+								Ready to make some memories?
+							</h2>
+
+							<p>
+								Let's plan a senior session that's
+								completely yours.
+							</p>
+
+							<a
+								href="https://connorscottphoto.com/booking/"
+								class="button primary"
+							>
+								Book Your Session
+							</a>
+
+						</div>
+
+
+					</div>
+
+				</div>
+
+			</section>
+
+
+			<!-- =========================================
+			     FOOTER
+			     ========================================= -->
+
+			<section id="footer">
+
+				<div class="inner">
+
+					<h2 class="major">
+						Have questions?
+					</h2>
+
+					<p>
+						Not sure which session is right for you?
+						Reach out and I'd be happy to help you figure
+						out what works best.
+					</p>
+
+					<form method="post" action="#">
+
+						<div class="fields">
+
+							<div class="field">
+								<label for="name">Name</label>
+								<input
+									type="text"
+									name="name"
+									id="name"
+								/>
+							</div>
+
+							<div class="field">
+								<label for="email">Email</label>
+								<input
+									type="email"
+									name="email"
+									id="email"
+								/>
+							</div>
+
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea
+									name="message"
+									id="message"
+									rows="4"
+								></textarea>
+							</div>
+
+						</div>
+
+						<ul class="actions">
+
+							<li>
+								<input
+									type="submit"
+									value="Send Message"
+								/>
+							</li>
+
+						</ul>
+
+					</form>
+
+
+					<ul class="contact">
+
+						<li class="icon solid fa-phone">
+							Your Phone Number
+						</li>
+
+						<li class="icon solid fa-envelope">
+							<a href="#">
+								Your Email
+							</a>
+						</li>
+
+						<li class="icon brands fa-instagram">
+							<a href="#">
+								Instagram
+							</a>
+						</li>
+
+					</ul>
+
+
+					<ul class="copyright">
+
+						<li>
+							&copy; Connor Scott Photography.
+							All rights reserved.
+						</li>
+
+						<li>
+							Design:
+							<a href="https://html5up.net">
+								HTML5 UP
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</section>
+
+
+		</div>
+
 
 		<!-- Scripts -->
-			<script src="/assets/js/jquery.min.js"></script>
-			<script src="/assets/js/jquery.scrollex.min.js"></script>
-			<script src="/assets/js/browser.min.js"></script>
-			<script src="/assets/js/breakpoints.min.js"></script>
-			<script src="/assets/js/util.js"></script>
-			<script src="/assets/js/main.js"></script>
+
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/jquery.scrollex.min.js"></script>
+		<script src="/assets/js/browser.min.js"></script>
+		<script src="/assets/js/breakpoints.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
 
 	</body>
 </html>
