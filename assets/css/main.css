@@ -4994,3 +4994,82 @@ footer p,
     margin: 0 auto 2em auto;
     background: rgba(201, 130, 109, 0.3);
 }
+
+/* =====================================================
+   FIX: INCLUDED BOX + CTA + FOOTER SPACING
+   ===================================================== */
+
+/* Fix the Included box padding */
+.pricing-note {
+    padding: 3em 3em !important;
+    margin-bottom: 2em !important;
+}
+
+.pricing-note h3 {
+    margin-bottom: 0.6em !important;
+}
+
+.pricing-note p {
+    margin-bottom: 0 !important;
+}
+
+/* Fix CTA spacing */
+.pricing-cta {
+    padding: 2em 0 3em 0 !important;
+    text-align: center !important;
+}
+
+.pricing-cta .eyebrow {
+    display: block !important;
+    margin-bottom: 0.8em !important;
+}
+
+.pricing-cta h2 {
+    margin-bottom: 0.4em !important;
+}
+
+.pricing-cta p {
+    max-width: 550px !important;
+    margin: 0 auto 1.8em auto !important;
+}
+
+/* Create even spacing between CTA and footer */
+.pricing-cta::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin: 2em auto 0 auto;
+    background: rgba(242, 237, 229, 0.1);
+}
+
+/* Fix the footer spacing so it's not crammed */
+#footer .inner {
+    padding-top: 3em !important;
+}
+
+#footer h2.major {
+    margin-bottom: 0.6em !important;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 736px) {
+
+    .pricing-note {
+        padding: 2em 1.5em !important;
+        margin-bottom: 1.5em !important;
+    }
+
+    .pricing-cta {
+        padding: 1.5em 0 2.5em 0 !important;
+    }
+
+    .pricing-cta::after {
+        margin-top: 1.5em !important;
+    }
+
+    #footer .inner {
+        padding-top: 2em !important;
+    }
+
+}
