@@ -568,426 +568,326 @@
 					<div class="inner pricing-page">
 
 
-					/* =========================================================
-					   SENIOR PRICING
-					   ========================================================= */
-					
-					.pricing-intro {
-						max-width: 760px;
-						margin: 0 auto 4em auto;
-						text-align: center;
-					}
-					
-					.pricing-intro h2 {
-						margin-bottom: 0.5em;
-					}
-					
-					.pricing-intro p {
-						color: #d6cec4;
-						line-height: 1.8;
-					}
-					
-					
-					/* =========================================================
-					   PACKAGE GRID
-					   ========================================================= */
-					
-					.pricing-grid {
-						display: grid;
-						grid-template-columns: repeat(3, 1fr);
-						gap: 1.75em;
-						align-items: stretch;
-					}
-					
-					
-					/* =========================================================
-					   PACKAGE CARD
-					   ========================================================= */
-					
-					.pricing-card {
-						position: relative;
-					
-						display: flex;
-						flex-direction: column;
-					
-						overflow: hidden;
-					
-						background: #172827;
-					
-						border: 1px solid rgba(236, 231, 225, 0.14);
-					
-						border-radius: 6px;
-					
-						transition:
-							transform 0.45s ease,
-							box-shadow 0.45s ease,
-							border-color 0.45s ease;
-					}
-					
-					
-					/* Card hover */
-					
-					.pricing-card:hover {
-						transform: translateY(-10px);
-					
-						border-color: rgba(212, 140, 112, 0.55);
-					
-						box-shadow:
-							0 25px 55px rgba(0, 0, 0, 0.35);
-					}
-					
-					
-					/* =========================================================
-					   LARGE PHOTOGRAPH
-					   ========================================================= */
-					
-					.pricing-photo {
-						position: relative;
-					
-						width: 100%;
-						height: 340px;
-					
-						overflow: hidden;
-					
-						background: #12151a;
-					}
-					
-					.pricing-photo img {
-						display: block;
-					
-						width: 100%;
-						height: 100%;
-					
-						object-fit: cover;
-					
-						transition:
-							transform 0.9s cubic-bezier(0.2, 0.65, 0.3, 1);
-					}
-					
-					
-					/* Image zoom */
-					
-					.pricing-card:hover .pricing-photo img {
-						transform: scale(1.08);
-					}
-					
-					
-					/* Dark cinematic overlay */
-					
-					.pricing-photo::after {
-						content: "";
-					
-						position: absolute;
-					
-						inset: 0;
-					
-						background:
-							linear-gradient(
-								to bottom,
-								transparent 45%,
-								rgba(18, 21, 26, 0.55) 100%
-							);
-					
-						pointer-events: none;
-					}
-					
-					
-					/* =========================================================
-					   PACKAGE CONTENT
-					   ========================================================= */
-					
-					.pricing-content {
-						padding: 2em 2em 2.25em;
-					
-						display: flex;
-						flex-direction: column;
-					
-						flex: 1;
-					}
-					
-					
-					/* Package number */
-					
-					.package-number {
-						display: block;
-					
-						margin-bottom: 0.75em;
-					
-						color: #718f87;
-					
-						font-size: 0.7em;
-						font-weight: 700;
-					
-						letter-spacing: 0.18em;
-					
-						text-transform: uppercase;
-					}
-					
-					
-					/* Package title */
-					
-					.pricing-content h3 {
-						margin-bottom: 0.4em;
-					
-						color: #ece7e1;
-					
-						font-size: 1.8em;
-					
-						letter-spacing: 0.03em;
-					
-						text-transform: uppercase;
-					}
-					
-					
-					/* Description */
-					
-					.package-description {
-						min-height: 4.5em;
-					
-						margin-bottom: 1.5em;
-					
-						color: #d6cec4;
-					
-						font-size: 0.86em;
-					
-						line-height: 1.75;
-					
-						opacity: 0.82;
-					}
-					
-					
-					/* =========================================================
-					   PRICE
-					   ========================================================= */
-					
-					.package-price {
-						margin-bottom: 1.75em;
-					
-						color: #d48c70;
-					
-						font-size: 2.9em;
-						font-weight: 700;
-					
-						line-height: 1;
-					}
-					
-					.package-price small {
-						display: block;
-					
-						margin-top: 0.65em;
-					
-						color: #d6cec4;
-					
-						font-size: 0.22em;
-						font-weight: 400;
-					
-						letter-spacing: 0.16em;
-					
-						text-transform: uppercase;
-					
-						opacity: 0.55;
-					}
-					
-					
-					/* =========================================================
-					   PACKAGE DETAILS
-					   ========================================================= */
-					
-					.package-details {
-						list-style: none;
-					
-						margin: 0 0 2em;
-						padding: 0;
-					
-						border-top: 1px solid rgba(236, 231, 225, 0.12);
-					}
-					
-					.package-details li {
-						margin: 0;
-					
-						padding: 0.85em 0;
-					
-						border-bottom: 1px solid rgba(236, 231, 225, 0.09);
-					
-						color: #d6cec4;
-					
-						font-size: 0.78em;
-					}
-					
-					.package-details li strong {
-						color: #ece7e1;
-					}
-					
-					.package-details li span {
-						float: right;
-					
-						color: #718f87;
-					
-						font-weight: 600;
-					}
-					
-					
-					/* =========================================================
-					   BUTTON
-					   ========================================================= */
-					
-					.pricing-content .button {
-						width: 100%;
-					
-						margin-top: auto;
-					
-						text-align: center;
-					}
-					
-					
-					/* =========================================================
-					   STANDARD / MOST POPULAR
-					   ========================================================= */
-					
-					.pricing-card.featured {
-						background: #223b39;
-					
-						border-color: #d48c70;
-					
-						transform: translateY(-14px);
-					
-						box-shadow:
-							0 22px 55px rgba(0, 0, 0, 0.3);
-					}
-					
-					.pricing-card.featured:hover {
-						transform: translateY(-24px);
-					
-						border-color: #e8a28c;
-					}
-					
-					
-					/* Popular badge */
-					
-					.popular-badge {
-						position: absolute;
-					
-						top: 18px;
-						left: 18px;
-					
-						z-index: 10;
-					
-						padding: 0.55em 1em;
-					
-						background: #d48c70;
-					
-						color: #fff;
-					
-						border-radius: 30px;
-					
-						font-size: 0.65em;
-						font-weight: 700;
-					
-						letter-spacing: 0.13em;
-					
-						text-transform: uppercase;
-					}
-					
-					
-					/* =========================================================
-					   LOWER INFORMATION
-					   ========================================================= */
-					
-					.pricing-note {
-						max-width: 850px;
-					
-						margin: 5em auto 0;
-					
-						padding: 2.5em;
-					
-						background: rgba(18, 21, 26, 0.4);
-					
-						border: 1px solid rgba(236, 231, 225, 0.12);
-					
-						border-radius: 6px;
-					}
-					
-					.pricing-note h3 {
-						margin-bottom: 0.6em;
-					
-						color: #ece7e1;
-					}
-					
-					.pricing-note p {
-						margin: 0;
-					
-						color: #d6cec4;
-					
-						line-height: 1.8;
-					}
-					
-					
-					/* =========================================================
-					   CTA
-					   ========================================================= */
-					
-					.pricing-cta {
-						margin-top: 5em;
-					
-						text-align: center;
-					}
-					
-					.pricing-cta p {
-						max-width: 650px;
-					
-						margin: 0 auto 2em;
-					
-						color: #d6cec4;
-					
-						line-height: 1.8;
-					}
-					
-					
-					/* =========================================================
-					   TABLET
-					   ========================================================= */
-					
-					@media screen and (max-width: 980px) {
-					
-						.pricing-grid {
-							grid-template-columns: 1fr;
-					
-							max-width: 600px;
-					
-							margin-left: auto;
-							margin-right: auto;
-						}
-					
-						.pricing-card.featured {
-							transform: none;
-						}
-					
-						.pricing-card.featured:hover {
-							transform: translateY(-10px);
-						}
-					
-					}
-					
-					
-					/* =========================================================
-					   PHONE
-					   ========================================================= */
-					
-					@media screen and (max-width: 480px) {
-					
-						.pricing-photo {
-							height: 280px;
-						}
-					
-						.pricing-content {
-							padding: 1.5em;
-						}
-					
-						.package-price {
-							font-size: 2.5em;
-						}
-					
-					}
+<div class="pricing-intro">
+
+	<h2 class="major">
+		Senior Photography
+	</h2>
+
+	<p>
+		Choose the session that fits your vision.
+		Whether you want something simple and relaxed
+		or a full senior experience, there's a collection
+		for you.
+	</p>
+
+</div>
+
+
+<div class="pricing-grid">
+
+
+	<!-- MINI -->
+
+	<article class="pricing-card">
+
+		<div class="pricing-photo">
+
+			<img
+				src="/images/pic04.jpg"
+				alt="Senior photography session"
+			/>
+
+		</div>
+
+
+		<div class="pricing-content">
+
+			<span class="package-number">
+				01 — Mini Session
+			</span>
+
+			<h3>
+				Mini
+			</h3>
+
+			<p class="package-description">
+				A shorter session for seniors who want
+				a simple collection of beautiful photos
+				without committing to a full afternoon.
+			</p>
+
+
+			<div class="package-price">
+
+				$175
+
+				<small>
+					Session Investment
+				</small>
+
+			</div>
+
+
+			<ul class="package-details">
+
+				<li>
+					<strong>Session</strong>
+					<span>1 Hour</span>
+				</li>
+
+				<li>
+					<strong>Location</strong>
+					<span>1</span>
+				</li>
+
+				<li>
+					<strong>Outfits</strong>
+					<span>1–2</span>
+				</li>
+
+				<li>
+					<strong>Edited Photos</strong>
+					<span>15</span>
+				</li>
+
+				<li>
+					<strong>Printed Photos</strong>
+					<span>None</span>
+				</li>
+
+			</ul>
+
+
+			<a
+				href="https://connorscottphoto.com/booking/"
+				class="button"
+			>
+				Book Mini
+			</a>
+
+		</div>
+
+	</article>
+
+
+
+	<!-- STANDARD -->
+
+	<article class="pricing-card featured">
+
+		<div class="popular-badge">
+			Most Popular
+		</div>
+
+
+		<div class="pricing-photo">
+
+			<img
+				src="/images/pic05.jpg"
+				alt="Senior photography session"
+			/>
+
+		</div>
+
+
+		<div class="pricing-content">
+
+			<span class="package-number">
+				02 — Standard Session
+			</span>
+
+			<h3>
+				Standard
+			</h3>
+
+			<p class="package-description">
+				The perfect balance of variety, locations,
+				outfits, and time. A complete senior
+				photography experience.
+			</p>
+
+
+			<div class="package-price">
+
+				$375
+
+				<small>
+					Session Investment
+				</small>
+
+			</div>
+
+
+			<ul class="package-details">
+
+				<li>
+					<strong>Session</strong>
+					<span>2 Hours</span>
+				</li>
+
+				<li>
+					<strong>Locations</strong>
+					<span>Up to 2</span>
+				</li>
+
+				<li>
+					<strong>Outfits</strong>
+					<span>2–3</span>
+				</li>
+
+				<li>
+					<strong>Edited Photos</strong>
+					<span>40</span>
+				</li>
+
+				<li>
+					<strong>Printed Photos</strong>
+					<span>10</span>
+				</li>
+
+			</ul>
+
+
+			<a
+				href="https://connorscottphoto.com/booking/"
+				class="button"
+			>
+				Book Standard
+			</a>
+
+		</div>
+
+	</article>
+
+
+
+	<!-- DELUXE -->
+
+	<article class="pricing-card">
+
+		<div class="pricing-photo">
+
+			<img
+				src="/images/pic06.jpg"
+				alt="Senior photography session"
+			/>
+
+		</div>
+
+
+		<div class="pricing-content">
+
+			<span class="package-number">
+				03 — Deluxe Session
+			</span>
+
+			<h3>
+				Deluxe
+			</h3>
+
+			<p class="package-description">
+				The full senior experience for those who
+				want more locations, more outfits, and
+				more memories.
+			</p>
+
+
+			<div class="package-price">
+
+				$650
+
+				<small>
+					Session Investment
+				</small>
+
+			</div>
+
+
+			<ul class="package-details">
+
+				<li>
+					<strong>Session</strong>
+					<span>3 Hours</span>
+				</li>
+
+				<li>
+					<strong>Locations</strong>
+					<span>Up to 3</span>
+				</li>
+
+				<li>
+					<strong>Outfits</strong>
+					<span>3–4</span>
+				</li>
+
+				<li>
+					<strong>Edited Photos</strong>
+					<span>75</span>
+				</li>
+
+				<li>
+					<strong>Printed Photos</strong>
+					<span>25</span>
+				</li>
+
+			</ul>
+
+
+			<a
+				href="https://connorscottphoto.com/booking/"
+				class="button"
+			>
+				Book Deluxe
+			</a>
+
+		</div>
+
+	</article>
+
+
+</div>
+
+
+<!-- INCLUDED -->
+
+<div class="pricing-note">
+
+	<h3 class="major">
+		Every Session Includes
+	</h3>
+
+	<p>
+		Pre-session planning, location guidance, professional
+		editing, an online gallery, posing and direction
+		throughout your session, and high-resolution digital
+		images.
+	</p>
+
+</div>
+
+
+<!-- CTA -->
+
+<div class="pricing-cta">
+
+	<h2>
+		Ready to Make Some Memories?
+	</h2>
+
+	<p>
+		Not sure which session is right for you?
+		Let's talk about what you're looking for.
+	</p>
+
+	<a
+		href="https://connorscottphoto.com/booking/"
+		class="button primary"
+	>
+		Book Your Session
+	</a>
+
+</div>
 
 
 					</div>
