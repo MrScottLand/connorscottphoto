@@ -5062,7 +5062,7 @@ footer p,
 }
 
 /* =====================================================
-   PHOTO DIVIDER – Straight Row (Centered)
+   PHOTO DIVIDER – Straight Row (Centered, Bigger, No Hover)
    ===================================================== */
 
 .photo-divider {
@@ -5081,7 +5081,7 @@ footer p,
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: rgba(201, 130, 109, 0.4) rgba(255, 255, 255, 0.05);
-    justify-content: center;  /* ← This centers them */
+    justify-content: center;
 }
 
 .photo-strip::-webkit-scrollbar {
@@ -5103,19 +5103,14 @@ footer p,
 }
 
 .photo-strip-item {
-    flex: 0 0 200px;
+    flex: 0 0 250px;  /* Bigger from 200px to 250px */
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 6px;
     scroll-snap-align: start;
     background: #2a323a;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.photo-strip-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    /* Removed transition and hover effects */
 }
 
 .photo-strip-item img {
@@ -5124,6 +5119,7 @@ footer p,
     object-fit: cover;
     display: block;
 }
+
 /* =====================================================
    SPACING FIXES
    ===================================================== */
