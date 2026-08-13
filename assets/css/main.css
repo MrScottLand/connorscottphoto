@@ -5062,24 +5062,33 @@ footer p,
 }
 
 /* =====================================================
-   PHOTO DIVIDER – Centered, Bigger, Straight Line
+   PHOTO DIVIDER – Centered
    ===================================================== */
 
 .photo-divider {
     padding: 1em 0 3em 0;
     text-align: center;
+    width: 100%;
 }
 
 .photo-strip {
-    display: inline-flex;
+    display: flex;
     gap: 1em;
     overflow-x: auto;
     padding: 0.5em 2em 1.5em 2em;
-    max-width: 95vw;
+    max-width: 100%;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: rgba(201, 130, 109, 0.4) rgba(255, 255, 255, 0.05);
+    justify-content: flex-start;  /* Left align the strip */
+}
+
+/* Center the strip container */
+.photo-divider .photo-strip-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .photo-strip::-webkit-scrollbar {
@@ -5147,17 +5156,21 @@ footer p,
 @media screen and (max-width: 736px) {
 
     .review-card {
-        flex: 0 0 260px;
-        min-height: 160px;
-        padding: 1.5em;
+        flex: 0 0 280px;
+        min-height: 80px;
+        padding: 1em 1.2em;
     }
 
     .review-text {
+        font-size: 0.85em;
+    }
+
+    .review-stars {
         font-size: 0.9em;
     }
 
     .photo-strip-item {
-        flex: 0 0 160px;
+        flex: 0 0 150px;
     }
 
     .photo-strip {
@@ -5182,4 +5195,3 @@ footer p,
     }
 
 }
-
