@@ -4969,3 +4969,28 @@ footer p,
         object-position: center 25%;  /* Even more down on mobile */
     }
 }
+
+/* Merge Included + CTA */
+.pricing-note {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.pricing-cta {
+    padding-top: 0.5em !important;
+    padding-bottom: 2em !important;
+}
+
+.pricing-cta .eyebrow {
+    margin-bottom: 0.5em !important;
+}
+
+/* Optional: Add a subtle line between them */
+.pricing-cta::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 0 auto 2em auto;
+    background: rgba(201, 130, 109, 0.3);
+}
