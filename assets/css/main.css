@@ -4530,24 +4530,14 @@ footer p,
     margin-top: 0;
 }
 
-/* =====================================================
-   SENIOR PHOTOGRAPHY PRICING CARDS
-   ===================================================== */
+/* =========================================================
+   SENIOR PRICING
+   ========================================================= */
 
 .pricing-intro {
-	max-width: 800px;
+	max-width: 760px;
 	margin: 0 auto 4em auto;
 	text-align: center;
-}
-
-.pricing-intro .eyebrow {
-	display: block;
-	margin-bottom: 1em;
-	color: #718F87;
-	font-size: 0.75em;
-	font-weight: 700;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
 }
 
 .pricing-intro h2 {
@@ -4555,30 +4545,30 @@ footer p,
 }
 
 .pricing-intro p {
-	color: #D5CDC2;
+	color: #d6cec4;
 	line-height: 1.8;
 }
 
 
-/* =====================================================
-   CARDS
-   ===================================================== */
+/* =========================================================
+   PACKAGE GRID
+   ========================================================= */
 
 .pricing-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 2em;
+	gap: 1.75em;
 	align-items: stretch;
-	margin-top: 3em;
 }
 
 
-/* =====================================================
-   CARD
-   ===================================================== */
+/* =========================================================
+   PACKAGE CARD
+   ========================================================= */
 
 .pricing-card {
 	position: relative;
+
 	display: flex;
 	flex-direction: column;
 
@@ -4586,218 +4576,224 @@ footer p,
 
 	background: #172827;
 
-	border: 1px solid rgba(242, 237, 229, 0.14);
-	border-radius: 10px;
+	border: 1px solid rgba(236, 231, 225, 0.14);
+
+	border-radius: 6px;
 
 	transition:
-		transform 0.4s ease,
-		box-shadow 0.4s ease,
-		border-color 0.4s ease;
+		transform 0.45s ease,
+		box-shadow 0.45s ease,
+		border-color 0.45s ease;
 }
 
 
-/* Little lift when hovering */
+/* Card hover */
 
 .pricing-card:hover {
 	transform: translateY(-10px);
 
-	border-color: rgba(113, 143, 135, 0.7);
+	border-color: rgba(212, 140, 112, 0.55);
 
 	box-shadow:
-		0 20px 45px rgba(0, 0, 0, 0.3);
+		0 25px 55px rgba(0, 0, 0, 0.35);
 }
 
 
-/* =====================================================
-   PHOTO
-   ===================================================== */
+/* =========================================================
+   LARGE PHOTOGRAPH
+   ========================================================= */
 
-.pricing-card-image {
+.pricing-photo {
 	position: relative;
 
 	width: 100%;
-	height: 270px;
+	height: 340px;
 
 	overflow: hidden;
 
-	background: #10191A;
+	background: #12151a;
 }
 
-.pricing-card-image img {
+.pricing-photo img {
+	display: block;
+
 	width: 100%;
 	height: 100%;
 
 	object-fit: cover;
 
-	display: block;
-
 	transition:
-		transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1),
-		filter 0.5s ease;
+		transform 0.9s cubic-bezier(0.2, 0.65, 0.3, 1);
 }
 
 
-/* Photo zoom */
+/* Image zoom */
 
-.pricing-card:hover .pricing-card-image img {
+.pricing-card:hover .pricing-photo img {
 	transform: scale(1.08);
 }
 
 
-/* Slight dark overlay */
+/* Dark cinematic overlay */
 
-.pricing-card-image::after {
+.pricing-photo::after {
 	content: "";
 
 	position: absolute;
+
 	inset: 0;
 
 	background:
 		linear-gradient(
 			to bottom,
-			rgba(16, 25, 26, 0) 55%,
-			rgba(16, 25, 26, 0.35) 100%
+			transparent 45%,
+			rgba(18, 21, 26, 0.55) 100%
 		);
 
 	pointer-events: none;
 }
 
 
-/* =====================================================
-   CARD CONTENT
-   ===================================================== */
+/* =========================================================
+   PACKAGE CONTENT
+   ========================================================= */
 
-.pricing-card-content {
+.pricing-content {
+	padding: 2em 2em 2.25em;
+
 	display: flex;
 	flex-direction: column;
 
 	flex: 1;
-
-	padding: 2em;
 }
 
 
-/* =====================================================
-   PACKAGE LABEL
-   ===================================================== */
+/* Package number */
 
 .package-number {
-	color: #718F87;
+	display: block;
+
+	margin-bottom: 0.75em;
+
+	color: #718f87;
 
 	font-size: 0.7em;
 	font-weight: 700;
 
 	letter-spacing: 0.18em;
-	text-transform: uppercase;
 
-	margin-bottom: 0.6em;
+	text-transform: uppercase;
 }
 
 
-.pricing-card h3 {
-	margin-bottom: 0.35em;
+/* Package title */
 
-	color: #F2EDE5;
+.pricing-content h3 {
+	margin-bottom: 0.4em;
 
-	font-size: 1.7em;
+	color: #ece7e1;
+
+	font-size: 1.8em;
+
+	letter-spacing: 0.03em;
 
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
 }
 
+
+/* Description */
 
 .package-description {
-	min-height: 4em;
+	min-height: 4.5em;
 
-	color: #D5CDC2;
+	margin-bottom: 1.5em;
 
-	font-size: 0.85em;
+	color: #d6cec4;
 
-	line-height: 1.7;
+	font-size: 0.86em;
 
-	opacity: 0.8;
+	line-height: 1.75;
+
+	opacity: 0.82;
 }
 
 
-/* =====================================================
+/* =========================================================
    PRICE
-   ===================================================== */
+   ========================================================= */
 
 .package-price {
-	margin: 1.5em 0;
+	margin-bottom: 1.75em;
 
-	color: #C9826D;
+	color: #d48c70;
 
-	font-size: 2.7em;
+	font-size: 2.9em;
 	font-weight: 700;
 
 	line-height: 1;
 }
 
-
 .package-price small {
 	display: block;
 
-	margin-top: 0.6em;
+	margin-top: 0.65em;
 
-	color: #D5CDC2;
+	color: #d6cec4;
 
-	font-size: 0.25em;
+	font-size: 0.22em;
 	font-weight: 400;
 
-	letter-spacing: 0.12em;
+	letter-spacing: 0.16em;
+
 	text-transform: uppercase;
 
 	opacity: 0.55;
 }
 
 
-/* =====================================================
-   DETAILS
-   ===================================================== */
+/* =========================================================
+   PACKAGE DETAILS
+   ========================================================= */
 
 .package-details {
 	list-style: none;
 
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 	padding: 0;
 
-	border-top: 1px solid rgba(242, 237, 229, 0.12);
+	border-top: 1px solid rgba(236, 231, 225, 0.12);
 }
-
 
 .package-details li {
 	margin: 0;
 
-	padding: 0.8em 0;
+	padding: 0.85em 0;
 
-	border-bottom: 1px solid rgba(242, 237, 229, 0.1);
+	border-bottom: 1px solid rgba(236, 231, 225, 0.09);
 
-	color: #D5CDC2;
+	color: #d6cec4;
 
-	font-size: 0.8em;
+	font-size: 0.78em;
 }
-
 
 .package-details li strong {
-	color: #F2EDE5;
+	color: #ece7e1;
 }
-
 
 .package-details li span {
 	float: right;
 
-	color: #718F87;
+	color: #718f87;
 
 	font-weight: 600;
 }
 
 
-/* =====================================================
+/* =========================================================
    BUTTON
-   ===================================================== */
+   ========================================================= */
 
-.pricing-card .button {
+.pricing-content .button {
 	width: 100%;
 
 	margin-top: auto;
@@ -4806,91 +4802,91 @@ footer p,
 }
 
 
-/* =====================================================
-   MOST POPULAR
-   ===================================================== */
+/* =========================================================
+   STANDARD / MOST POPULAR
+   ========================================================= */
 
 .pricing-card.featured {
-	background: #223B39;
+	background: #223b39;
 
-	border-color: #C9826D;
+	border-color: #d48c70;
 
-	transform: translateY(-12px);
+	transform: translateY(-14px);
 
 	box-shadow:
-		0 18px 45px rgba(0, 0, 0, 0.25);
+		0 22px 55px rgba(0, 0, 0, 0.3);
 }
-
 
 .pricing-card.featured:hover {
-	transform: translateY(-20px);
+	transform: translateY(-24px);
 
-	border-color: #E2A08B;
+	border-color: #e8a28c;
 }
 
+
+/* Popular badge */
 
 .popular-badge {
 	position: absolute;
 
 	top: 18px;
-	right: 18px;
+	left: 18px;
 
-	z-index: 5;
+	z-index: 10;
 
-	padding: 0.5em 0.9em;
+	padding: 0.55em 1em;
 
-	background: #C9826D;
+	background: #d48c70;
 
-	color: #FFFFFF;
+	color: #fff;
 
 	border-radius: 30px;
 
 	font-size: 0.65em;
 	font-weight: 700;
 
-	letter-spacing: 0.12em;
+	letter-spacing: 0.13em;
+
 	text-transform: uppercase;
 }
 
 
-/* =====================================================
-   BOTTOM INFO
-   ===================================================== */
+/* =========================================================
+   LOWER INFORMATION
+   ========================================================= */
 
 .pricing-note {
-	margin: 5em auto 0 auto;
-
 	max-width: 850px;
+
+	margin: 5em auto 0;
 
 	padding: 2.5em;
 
-	background: rgba(16, 25, 26, 0.35);
+	background: rgba(18, 21, 26, 0.4);
 
-	border: 1px solid rgba(242, 237, 229, 0.12);
+	border: 1px solid rgba(236, 231, 225, 0.12);
 
-	border-radius: 8px;
+	border-radius: 6px;
 }
-
 
 .pricing-note h3 {
 	margin-bottom: 0.6em;
 
-	color: #F2EDE5;
+	color: #ece7e1;
 }
-
 
 .pricing-note p {
 	margin: 0;
 
-	color: #D5CDC2;
+	color: #d6cec4;
 
 	line-height: 1.8;
 }
 
 
-/* =====================================================
+/* =========================================================
    CTA
-   ===================================================== */
+   ========================================================= */
 
 .pricing-cta {
 	margin-top: 5em;
@@ -4898,21 +4894,20 @@ footer p,
 	text-align: center;
 }
 
-
 .pricing-cta p {
 	max-width: 650px;
 
-	margin: 0 auto 2em auto;
+	margin: 0 auto 2em;
 
-	color: #D5CDC2;
+	color: #d6cec4;
 
 	line-height: 1.8;
 }
 
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media screen and (max-width: 980px) {
 
@@ -4936,18 +4931,22 @@ footer p,
 }
 
 
+/* =========================================================
+   PHONE
+   ========================================================= */
+
 @media screen and (max-width: 480px) {
 
-	.pricing-card-image {
-		height: 230px;
+	.pricing-photo {
+		height: 280px;
 	}
 
-	.pricing-card-content {
+	.pricing-content {
 		padding: 1.5em;
 	}
 
 	.package-price {
-		font-size: 2.4em;
+		font-size: 2.5em;
 	}
 
 }
