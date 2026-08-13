@@ -161,3 +161,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     elements.forEach(el => observer.observe(el));
 });
+
+// --- SMOOTH SCROLL FOR "SEE MORE" ---
+function smoothScroll(event, targetId) {
+    event.preventDefault();
+    
+    var target = $('#' + targetId);
+    
+    if (target.length) {
+        var targetOffset = target.offset().top - 80;
+        $('html, body').animate({
+            scrollTop: targetOffset
+        }, 2500); // ← Change 2500 to control speed (higher = slower)
+    }
+}
