@@ -5073,7 +5073,7 @@ footer p,
 
 .photo-strip {
     display: flex;
-    gap: 1em;
+    gap: 0.8em;
     padding: 0.5em 0 0.5em 0;
     max-width: 100%;
     justify-content: center;
