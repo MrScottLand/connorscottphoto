@@ -159,29 +159,16 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     });
 
-	// --- SMOOTH SCROLL FOR "SEE MORE" ---
-document.addEventListener('DOMContentLoaded', function() {
-    // Find all anchor links that start with #
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-            // Get the target element
-            var target = document.querySelector(this.getAttribute('href'));
-            
-            if (target) {
-                e.preventDefault();
-                
-                // Calculate position (with offset for header)
-                var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                
-                // Smooth scroll with custom speed
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
+// --- SMOOTH SCROLL FUNCTION FOR "SEE MORE" ---
+function smoothScroll(event, targetId) {
+    event.preventDefault();
     
-    elements.forEach(el => observer.observe(el));
-});
+    var target = $('#' + targetId);
+    
+    if (target.length) {
+        var targetOffset = target.offset().top - 80;
+        $('html, body').animate({
+            scrollTop: targetOffset
+        }, 2500); // ← Change 2500 to control speed
+    }
+}
